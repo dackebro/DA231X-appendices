@@ -1,0 +1,13 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Count.java b/experiments/src/main/java/com/experiments/changes/Count.java
+index fe28ed8..cf44197 100644
+--- a/experiments/src/main/java/com/experiments/changes/Count.java
++++ b/experiments/src/main/java/com/experiments/changes/Count.java
+@@ -12,7 +12,7 @@ public class Count {
+ 
+     @Override
+     public void run() {
+-      synchronized (this) {
++      synchronized (lock) {
+         for (int i = 0; i < threadTarget; i++) {
+           sum += 1;
+         }

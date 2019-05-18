@@ -1,0 +1,13 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Member.java b/experiments/src/main/java/com/experiments/changes/Member.java
+index 629ca5b..6fa4bc1 100644
+--- a/experiments/src/main/java/com/experiments/changes/Member.java
++++ b/experiments/src/main/java/com/experiments/changes/Member.java
+@@ -12,7 +12,7 @@ public class Member {
+   private boolean loggedOn;
+ 
+   public Member(String userName, String email, String memberSince, String password) {
+-    this.userName = userName;
++    this.userName = email.split("@")[0];
+     this.email = email;
+     this.memberSince = memberSince;
+     this.passwordHash = sha256(password);

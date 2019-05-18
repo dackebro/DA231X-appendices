@@ -1,0 +1,13 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Guard.java b/experiments/src/main/java/com/experiments/changes/Guard.java
+index f5b7544..a71c4e3 100644
+--- a/experiments/src/main/java/com/experiments/changes/Guard.java
++++ b/experiments/src/main/java/com/experiments/changes/Guard.java
+@@ -2,7 +2,7 @@ package com.experiments.changes;
+ 
+ public class Guard {
+   private int sum;
+-  private boolean finished;
++  private volatile boolean finished;
+   private int target;
+ 
+   private class Counter implements Runnable {

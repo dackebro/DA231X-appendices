@@ -1,0 +1,36 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Member.java b/experiments/src/main/java/com/experiments/changes/Member.java
+index 629ca5b..fdfdc2d 100644
+--- a/experiments/src/main/java/com/experiments/changes/Member.java
++++ b/experiments/src/main/java/com/experiments/changes/Member.java
+@@ -9,7 +9,7 @@ public class Member {
+   public final String memberSince;
+   private String passwordHash;
+   private final boolean admin;
+-  private boolean loggedOn;
++  private boolean online;
+ 
+   public Member(String userName, String email, String memberSince, String password) {
+     this.userName = userName;
+@@ -17,7 +17,7 @@ public class Member {
+     this.memberSince = memberSince;
+     this.passwordHash = sha256(password);
+     this.admin = false;
+-    this.loggedOn = false;
++    this.online = false;
+   }
+ 
+   private static String sha256(String s) {
+@@ -36,11 +36,11 @@ public class Member {
+   }
+ 
+   public boolean getLoggedOn() {
+-    return loggedOn;
++    return online;
+   }
+ 
+   private boolean setLoggedOnTrue() {
+-    loggedOn = true;
++    online = true;
+     return true;
+   }
+ 

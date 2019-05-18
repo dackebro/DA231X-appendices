@@ -1,0 +1,15 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Member.java b/experiments/src/main/java/com/experiments/changes/Member.java
+index 629ca5b..7780026 100644
+--- a/experiments/src/main/java/com/experiments/changes/Member.java
++++ b/experiments/src/main/java/com/experiments/changes/Member.java
+@@ -24,10 +24,6 @@ public class Member {
+     return new String(DigestUtils.sha256(s));
+   }
+ 
+-  private static String sha512(String s) {
+-    return new String(DigestUtils.sha512(s));
+-  }
+-
+   private void validatePasswordViaHash(String passwordAttempt) throws IOException {
+     String hash = sha256(passwordAttempt);
+     if (!passwordHash.equals(hash)) {

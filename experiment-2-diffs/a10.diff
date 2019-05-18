@@ -1,0 +1,12 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Member.java b/experiments/src/main/java/com/experiments/changes/Member.java
+index 629ca5b..1052e41 100644
+--- a/experiments/src/main/java/com/experiments/changes/Member.java
++++ b/experiments/src/main/java/com/experiments/changes/Member.java
+@@ -7,6 +7,7 @@ public class Member {
+   public String userName;
+   public final String email;
+   public final String memberSince;
++  public String countryCode;
+   private String passwordHash;
+   private final boolean admin;
+   private boolean loggedOn;

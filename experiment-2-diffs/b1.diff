@@ -1,0 +1,12 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Equals.java b/experiments/src/main/java/com/experiments/changes/Equals.java
+index 01a7702..3b7675f 100644
+--- a/experiments/src/main/java/com/experiments/changes/Equals.java
++++ b/experiments/src/main/java/com/experiments/changes/Equals.java
+@@ -3,6 +3,6 @@ package com.experiments.changes;
+ public class Equals {
+   public static boolean stringEquals(String s) {
+     String t = new String(s);
+-    return s == t;
++    return s.equals(t);
+   }
+ }

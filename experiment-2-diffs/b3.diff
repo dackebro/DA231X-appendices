@@ -1,0 +1,14 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Member.java b/experiments/src/main/java/com/experiments/changes/Member.java
+index 629ca5b..4d0c04e 100644
+--- a/experiments/src/main/java/com/experiments/changes/Member.java
++++ b/experiments/src/main/java/com/experiments/changes/Member.java
+@@ -52,7 +52,8 @@ public class Member {
+     } catch (IOException e) {
+       validated = false;
+     }
+-    return validated && setLoggedOnTrue();
++    boolean active = setLoggedOnTrue();
++    return validated && active;
+   }
+ 
+   public String changePassword(String oldPwd, String newPwd) throws IOException {

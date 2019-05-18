@@ -1,0 +1,13 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Count.java b/experiments/src/main/java/com/experiments/changes/Count.java
+index d5de91f..483cc45 100644
+--- a/experiments/src/main/java/com/experiments/changes/Count.java
++++ b/experiments/src/main/java/com/experiments/changes/Count.java
+@@ -41,7 +41,7 @@ public class Count {
+    */
+   public static int sequentialCount(int x, int y) {
+     int sum = 0;
+-    for (int i = 0; i <= x; i++) {
++    for (int i = 0; i < x; i++) {
+       for (int j = 0; j < y; j++) {
+         sum++;
+       }

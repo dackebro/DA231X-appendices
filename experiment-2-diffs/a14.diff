@@ -1,0 +1,39 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Member.java b/experiments/src/main/java/com/experiments/changes/Member.java
+index 629ca5b..e71a2a6 100644
+--- a/experiments/src/main/java/com/experiments/changes/Member.java
++++ b/experiments/src/main/java/com/experiments/changes/Member.java
+@@ -15,13 +15,13 @@ public class Member {
+     this.userName = userName;
+     this.email = email;
+     this.memberSince = memberSince;
+-    this.passwordHash = sha256(password);
++    this.passwordHash = new String(sha256(password));
+     this.admin = false;
+     this.loggedOn = false;
+   }
+ 
+-  private static String sha256(String s) {
+-    return new String(DigestUtils.sha256(s));
++  private static byte[] sha256(String s) {
++    return DigestUtils.sha256(s);
+   }
+ 
+   private static String sha512(String s) {
+@@ -29,7 +29,7 @@ public class Member {
+   }
+ 
+   private void validatePasswordViaHash(String passwordAttempt) throws IOException {
+-    String hash = sha256(passwordAttempt);
++    String hash = new String(sha256(passwordAttempt));
+     if (!passwordHash.equals(hash)) {
+       throw new IOException("Password don't match");
+     }
+@@ -56,7 +56,7 @@ public class Member {
+   }
+ 
+   public String changePassword(String oldPwd, String newPwd) throws IOException {
+-    String newHash = sha256(newPwd);
++    String newHash = new String(sha256(newPwd));
+     validatePasswordViaHash(oldPwd);
+     passwordHash = newHash;
+     return newHash;

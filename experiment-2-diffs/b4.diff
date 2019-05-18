@@ -1,0 +1,12 @@
+diff --git a/experiments/src/main/java/com/experiments/changes/Member.java b/experiments/src/main/java/com/experiments/changes/Member.java
+index 629ca5b..8f7149a 100644
+--- a/experiments/src/main/java/com/experiments/changes/Member.java
++++ b/experiments/src/main/java/com/experiments/changes/Member.java
+@@ -59,6 +59,6 @@ public class Member {
+     String newHash = sha256(newPwd);
+     validatePasswordViaHash(oldPwd);
+     passwordHash = newHash;
+-    return newHash;
++    return "success";
+   }
+ }
